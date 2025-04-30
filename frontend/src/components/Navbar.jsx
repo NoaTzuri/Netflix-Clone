@@ -16,18 +16,22 @@ const Navbar = () => {
 		<header className='max-w-6xl mx-auto flex flex-wrap items-center justify-between p-4 h-20'>
 			<div className='flex items-center gap-10 z-50'>
 				<Link to='/'>
-					<img src='/netflix-logo.png' alt='Netflix Logo' className='w-32 sm:w-40' />
+					<img src='/netflix-logo.png' alt='Netflix Logo' className='w-32 sm:w-40 transition-transform duration-300 hover:scale-105' />
 				</Link>
 
 				{/* desktop navbar items */}
-				<div className='hidden sm:flex gap-2 items-center'>
-					<Link to='/' className='hover:underline' onClick={() => setContentType("movie")}>
+				<div className='hidden sm:flex gap-3 items-center'>
+					<Link to='/' className='relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full' 
+					onClick={() => setContentType("movie")}>
 						Movies
 					</Link>
-					<Link to='/' className='hover:underline' onClick={() => setContentType("tv")}>
+
+					<Link to='/' className='relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full' 
+					onClick={() => setContentType("tv")}>
 						Tv Shows
 					</Link>
-					<Link to='/history' className='hover:underline'>
+
+					<Link to='/history' className='relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full'>
 						Search History
 					</Link>
 				</div>
